@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body style="font-family:tahoma;background-color: #d9dfeb;">
+    <div class="create-post-page">
+        <div class="post-form">
+            <h2>Create Post</h2>
+            <label for="fileInput">Choose File:</label>
+            <input type="file" id="fileInput" accept="image/*">
+            
+            <label for="captionInput">Caption:</label>
+            <textarea id="captionInput" rows="4" placeholder="Write your caption..."></textarea>
+            
+            <label for="tagInput">Tag:</label>
+            <input type="text" id="tagInput" placeholder="Add tags, separated by commas">
+            
+            <button onclick="postImage()">Post</button>
+        </div>
+    </div>
+
+    <script src="script1.js"></script>
+   
+    
+</body>
+</html>
+

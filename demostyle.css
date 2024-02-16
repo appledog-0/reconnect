@@ -1,0 +1,31 @@
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.post {
+    margin-bottom: 20px;
+}
+
+.post-image {
+    width: 100%;
+}
+
+.post-interactions {
+    margin-top: 10px;
+}
+
+.comments {
+    margin-top: 10px;
+}
+
+/* Style buttons as needed */
+.like-btn,
+.comment-btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+    color: #333;
+}

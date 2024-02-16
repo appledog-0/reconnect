@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RECONNECT-homepage</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="friendlist.css">
+    <script src="https://kit.fontawesome.com/dcdee22e40.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <img src="logo.png" class="logo">
+            <div class="notification-container">
+                <button class="notification-btn" id="notificationBtn">
+                    <i class="fa-regular fa-bell" style="color: #000000;"></i>
+                </button>
+            </div>
+            <div class="create-post-container">
+                <button class="create-post-btn" onclick="toggleCreatePost()">
+                    <i class="fa-regular fa-envelope" style="color: #000000;"></i>     </button>
+            </div>
+            <div class="create-post-container">
+                <button class="create-post-btn" id="createPostBtn">
+                    <i class="fa-solid fa-plus" style="color: #010005;"></i>
+                </button>
+            </div>
+        </div>
+        <div class="nav-right">
+            <div class="search-box">
+                <img src="search.png">
+                <input type="text" placeholder="search">
+            </div>
+            <div class="nav-user-icon online" onclick="settingsMenuToggle()"> 
+                <img src="profile-pic2.jpg">
+            </div>
+        </div>
+        <div class="settings-menu">
+            <div id="dark-btn">
+                <span></span>
+            </div>
+            <div class="settings-menu-inner">
+                <div class="user-profile">
+                    <img src="profile-pic2.jpg">
+                    <div>
+                        <p>Edward Cullen</p>
+                       <a href="#">See your profile</a>
+                    </div>
+                </div>
+                
+               
+                <div class="settings-links">
+                    <img src="logout.png" class="settings-icon">
+                    <a href="#">Logout <img src="arrow.png" width="10px"></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+   
+    <div class="containeer">
+        <div class="left-sidebar">
+            <div class="imp-links" onclick="toggleFriendList()"> 
+                <a href="#"><img src="friends.png">Friends</a>
+                <div class="friend-container" id="friendListContainer">
+                    <!-- Friend list content -->
+                    <div class="friend-list">
+                        <h2>Friends</h2>
+                        <ul>
+                            <li>
+                                <img src="aavas.jpg" alt="Friend 1">
+                                <p>Aavas Chaudhary</p>
+                            </li>
+                            <li>
+                                <img src="surr.jpg" alt="Friend 2">
+                                <p>Surbi Karki</p>
+                            </li>
+                            <!-- Add more friend items as needed -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="shortcut-links">
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="story-gallery">
+            </div>    
+            <div class="post-containeer">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="aavas.jpg">
+                        <div>
+                            <p>Aavas chaudhary</p>
+                           <span>Jan 10 2024,13:40 pm</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                </div>
+                
+                <p class="post-text">hello, welcome to RECONNECT<a href="#">#RECONNECT</a></p>
+                <img src="aavas.jpg" class="post-img">
+
+                <div class="post-row">
+                    <div class="post-interactions">
+                        <button class="like-btn">Like</button>
+                        <button class="comment-btn">Comment</button>
+                    </div>
+                    <div class="comments">
+                        <!-- Comments will be displayed here -->
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="post-containeer">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="surr.jpg">
+                        <div>
+                            <p>Surbi Karki</p>
+                           <span>Jan 13 2024,13:40 pm</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                </div>
+                
+                <p class="post-text">hello</p>
+                <img src="surbi.jpg" class="post-img">
+
+                <div class="post-row">
+                    <div class="post-interactions">
+                        <button class="like-btn">Like</button>
+                        <button class="comment-btn">Comment</button>
+                    </div>
+                    <div class="comments">
+                        <!-- Comments will be displayed here -->
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Repeat post containers for more posts -->
+            <button type="button" class="load-more-btn">Load More</button>
+        </div>
+        <div class="right-sidebar">
+            <div class="sidebar-title">
+                <h4>Advertisement</h4>
+                <a href="#">close</a>
+            </div>
+            <img src="advertisement.png" class="sidebar-ads">
+        </div>
+    </div>
+    <div class="footer">
+        <p>Copyright 2024-RECONNECT</p>
+    </div>
+    <script src="demoscript.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Function to redirect to the create post page
+        document.getElementById('createPostBtn').addEventListener('click', function() {
+            window.location.href = 'createpost.html';
+        });
+    
+        // Function to redirect to the notification page
+        document.getElementById('notificationBtn').addEventListener('click', function() {
+            window.location.href = 'notification.html';
+        });
+    
+        
+    
+        // Function to handle logout
+        function logout() {
+            // Perform logout actions here (e.g., clearing session, etc.)
+            // Redirect users to the login page
+            window.location.href = 'login.html';
+        }
+    
+        // Add event listener to the logout link
+        var logoutLink = document.querySelector('.settings-links:last-of-type a');
+        logoutLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default behavior of the anchor tag
+            logout(); // Call the logout function
+        });
+        // Add this JavaScript code to toggle the friend list visibility
+        function toggleFriendList() {
+            var friendListContainer = document.getElementById('friendListContainer');
+            friendListContainer.style.display = friendListContainer.style.display === 'block' ? 'none' : 'block';
+        }
+
+        
+    </script>
+    
+</body>
+</html>

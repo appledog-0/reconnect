@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="notification-container">
+        <div class="notification-header">
+            <h2>Notifications</h2>
+            <button class="close-btn" onclick="closeNotifications()">Close</button>
+        </div>
+        <ul class="notification-list">
+            <li>
+                <div class="notification-item">
+                    <div class="notification-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="notification-content">
+                        <p>Aavas Chaudhary liked your post</p>
+                        <span>2 hours ago</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="notification-item">
+                    <div class="notification-icon">
+                        <i class="fas fa-comment"></i>
+                    </div>
+                    <div class="notification-content">
+                        <p>Surbi Karki commented on your photo</p>
+                        <span>5 hours ago</span>
+                    </div>
+                </div>
+            </li>
+            <!-- Add more notifications as needed -->
+        </ul>
+    </div>
+
+    <script src="notification.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+/* Friend list CSS */
+.friend-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #d9dfeb; /* Match background color with homepage */
+}
+
+.friend-list h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #3c5a99; /* Friends section color */
+}
+
+.friend-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.friend-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #d9dfeb; /* Match background color with homepage */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+.friend-list img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.friend-list p {
+    font-size: 18px;
+    margin: 0;
+    color: #333; /* Text color for friend names */
+}
+
+        /* Add CSS styles here */
+        .friend-container {
+            display: none;
+            position: absolute;
+            top: 100%; /* Position below the Friends link */
+            left: 0;
+            z-index: 1000; /* Ensure it's on top of other elements */
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+        }
+    
