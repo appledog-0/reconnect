@@ -139,7 +139,7 @@
                     
                 </div>
             </div>
-            <!-- Repeat post containers for more posts -->
+        
             <button type="button" class="load-more-btn">Load More</button>
         </div>
         <div class="right-sidebar">
@@ -156,32 +156,32 @@
     <script src="demoscript.js"></script>
     <script src="script.js"></script>
     <script>
-        // Function to redirect to the create post page
+   
         document.getElementById('createPostBtn').addEventListener('click', function() {
             window.location.href = 'createpost.html';
         });
     
-        // Function to redirect to the notification page
+
         document.getElementById('notificationBtn').addEventListener('click', function() {
             window.location.href = 'notification.html';
         });
     
         
     
-        // Function to handle logout
+    
         function logout() {
-            // Perform logout actions here (e.g., clearing session, etc.)
-            // Redirect users to the login page
+           
+  
             window.location.href = 'login.html';
         }
     
-        // Add event listener to the logout link
+ 
         var logoutLink = document.querySelector('.settings-links:last-of-type a');
         logoutLink.addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent default behavior of the anchor tag
-            logout(); // Call the logout function
+            event.preventDefault(); 
+            logout(); 
         });
-        // Add this JavaScript code to toggle the friend list visibility
+      
         function toggleFriendList() {
             var friendListContainer = document.getElementById('friendListContainer');
             friendListContainer.style.display = friendListContainer.style.display === 'block' ? 'none' : 'block';
