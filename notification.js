@@ -1,4 +1,4 @@
-// Close the notification when clicking outside of it
+
 window.addEventListener('click', function(event) {
     var notificationContainer = document.querySelector('.notification-container');
     if (event.target !== notificationContainer && !notificationContainer.contains(event.target)) {
@@ -6,7 +6,7 @@ window.addEventListener('click', function(event) {
     }
 });
 
-// Close the notification when pressing the Escape key
+
 window.addEventListener('keydown', function(event) {
     var notificationContainer = document.querySelector('.notification-container');
     if (event.key === 'Escape') {

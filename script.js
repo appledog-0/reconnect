@@ -40,10 +40,5 @@ else{
 
 localStorage.setItem("theme","dark");
 localStorage.getItem("theme");
-// Add this JavaScript code inside your existing <script> tag or in a separate file
 
-
-// Function to toggle the like button
-// Get the logout link element
-// Get the logout link element
 

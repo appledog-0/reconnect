@@ -23,7 +23,7 @@ function validateForm() {
 
     // Add more validation rules as needed
 
-    // If all validation passes, you can submit the form or perform other actions
+   
     alert("Form submitted successfully!");
      document.getElementById("signupForm").submit();
 }
