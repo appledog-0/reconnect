@@ -27,6 +27,10 @@
                     <i class="fa-solid fa-plus" style="color: #010005;"></i>
                 </button>
             </div>
+            <div class="create-post-container">
+                <button class="create-post-btn" id="home">
+                    <i class="fa-solid fa-house" style="color: #000000;"></i>       </button>
+            </div>
         </div>
         <div class="nav-right">
             <div class="search-box">
@@ -160,12 +164,14 @@
         document.getElementById('createPostBtn').addEventListener('click', function() {
             window.location.href = 'createpost.html';
         });
-    
-
         document.getElementById('notificationBtn').addEventListener('click', function() {
-            window.location.href = 'notification.html';
+            window.location.href = 'notification2.html';
         });
     
+
+        document.getElementById('home').addEventListener('click', function() {
+            window.location.href = 'homepage.html';
+        });
         
     
     
@@ -181,6 +187,11 @@
             event.preventDefault(); 
             logout(); 
         });
+        document.querySelector('.user-profile a').addEventListener('click', function(event) {
+    event.preventDefault(); 
+    window.location.href = 'profile2.html'; 
+});
+
       
         function toggleFriendList() {
             var friendListContainer = document.getElementById('friendListContainer');

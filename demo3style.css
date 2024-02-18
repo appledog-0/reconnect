@@ -273,353 +273,164 @@ nav{
 }
 .online-list .online img{
     width: 40px;
-    border-radius: 50%;
-
-
-}
-.online-list .online{
-    width:40px;
-    border-bottom: 50%;
     margin-right: 15px;
 }
-.online-list .online::after{
-    top:unset;
-    bottom: 5px;;
+.online-list .online p{
+    margin-bottom: 0;
+}
+.online-list .online i{
+    color: #41db51;
+}
+.footer{
+    background: var(--nav-color);
+    padding: 20px 5%;
+    text-align: center;
+    margin-top: 30px;
+    color: #ccc;
+}
+.footer p{
+    margin-bottom: 0;
 }
 .story-gallery{
-    display:none;
-   
+    display:flex;
+    overflow-x:auto;
+    margin-bottom: 20px;
+    scrollbar-width: none;
 }
-.story{
-    flex-basis: 18%;
-    padding-top: 32%;
-    position: relative;
-    background-position: center;
-    background-size: cover;
+.story-gallery::-webkit-scrollbar{
+    display: none;
+}
+.story-gallery img{
+    width:100px;
     border-radius: 10px;
-
-}
-.story img{
-    position: absolute;
-    width:45px;
-    border-radius: 50%;
-    top:10px;
-    left:10px;
-    border: 5px solid #3c5a99;
-}
-.story p{
-    position:absolute;
-    bottom:10px;
-    width:100%;
-    text-align: center;
-    color: #fff;
-    font-size: 14px;
-}
-
-.write-post-container{
-    margin-top: 20px;
-    width: 100%;
-    background:var(--bg-color);
-    border-radius: 6px;
-    padding: 20px;
-    color: #626262;
-}
-.user-profile{
-    display:flex;
-    align-items: center;
-}
-.user-profile img{
-    width: 45px;
-    border-radius: 50%;
     margin-right: 10px;
+    cursor:pointer;
+    border: 2px solid transparent;
+    transition: border 0.3s;
 }
-.user-profile p{
-    margin-bottom: -5px;
-    font-weight: 500;
-    color: #626262;
+.story-gallery img:last-child{
+    margin-right:0;
 }
-.user-profile small{
-    font-size: 12px;
-}
-.post-input-container{
-    padding-left:55px;
-    padding-top:20px;
-}
-.post-input-container textarea{
-    width:100%;
-    border:0;
-    outline:0;
-    border-bottom: 1px solid #ccc;
-    background: transparent;
-    resize:none;
-}
-.add-post-links{
-    display:flex;
-    margin-top:10px;
-}
-.add-post-links a{
-    text-decoration: none;
-    display:flex;
-    align-items: center;
-    color: #626262;
-    margin-right: 30px;
-    font-size: 13px;
-}
-.add-post-links a img{
-    width: 20px;
-    margin-right: 10px;
+.story-gallery img:hover{
+    border: 2px solid #ccc;
 }
 .post-containeer{
-    width: 100%;
-    background:var(--bg-color);
-    border-radius: 6px;
+    background: var(--bg-color);
     padding: 20px;
-    color: #626262;
-    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
 }
-.user-profile span{
-    font-size:13px;
-    color:#9a9a9a;
-}
-.post-text{
-    color:#9a9a9a;
-    margin:15px 0;
-    font-size: 15px;
-}
-.post-text span{
-    color: #626262;
-    font-weight: 500;
-}
-.post-text a{
-    color:#3c5a99;
-    text-decoration: none;
-}
-.post-img{
-    width:100%;
-    border-radius: 4px;
-    margin-bottom: 5px;
+.user-profile img{
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
 }
 .post-row{
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
-.activity-icons div img{
-    width:18px;
-    margin-right: 10px;
+.user-profile p{
+    margin-bottom: 0;
 }
-.activity-icons div{
-    display: inline-flex;
-    align-items: center;
-    margin-right: 30px;
-
+.post-text a{
+    color: #3c5a99;
+    text-decoration: none;
+}
+.post-text{
+    margin-bottom: 20px;
+}
+.post-img{
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
 }
 .post-profile-icon{
     display: flex;
     align-items: center;
 }
 .post-profile-icon img{
-    width: 20px;
+    width: 35px;
     border-radius: 50%;
-    margin-right: 5px;
-}
-.post-row a{
-    color:#9a9a9a
+    margin-right: 10px;
 }
 .load-more-btn{
-    display: block;
-    margin: auto;
+    background: #3c5a99;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
     cursor: pointer;
-    padding: 5px 10px;
-    border: 1px solid #9a9a9a;
-    color: #626262;
-    background: transparent;
-    border-radius: 4px;
+    transition: background 0.3s;
 }
-.footer{
-    text-align: center;
-    color: #9a9a9a;
-    padding: 10px 0 20px;
-    font-size: 13px;
+.load-more-btn:hover{
+    background: #2f4e85;
 }
-.settings-menu{
+.settings-menu {
     position: absolute;
-    width: 90%;
-    max-width: 350px;
-    background: var(--bg-color);
-    box-shadow: 0 0 10px rgba(0,0,0,0.4);
-    border-radius: 4px;
-    overflow: hidden;
-    top: 108%;
-    right: 5px;
-    max-height: 0;
-    transition: max-height 0.3s;
+    top: 65px;
+    right: 0;
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    width: 220px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1;
 }
-.settings-menu-height{
-    max-height: 450px;
+.settings-menu-inner {
+    padding: 16px;
 }
-.user-profile a{
-    font-size: 12px;
-    color: #3c5a99;
-    text-decoration: none;
-}
-.settings-menu-inner{
-    padding: 20px;
-
-}
-.settings-menu hr{
-    border: 0;
-    height:1px;
-    background: #9a9a9a;
-    margin: 15px 0;
-}
-.settings-links{
+.user-profile {
     display: flex;
     align-items: center;
-    margin: 15px 0;
 }
-.settings-links .settings-icon{
-    width: 38px;
-    margin-right: 10px;
+.user-profile img {
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-
+    margin-right: 10px;
 }
-.settings-links a{
+.user-profile p {
+    margin-bottom: 0;
+}
+.settings-menu hr {
+    margin: 10px 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+.settings-links {
     display: flex;
-    flex: 1;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.settings-links img {
+    width: 24px;
+    margin-right: 10px;
+}
+.settings-icon{
+    width: 24px;
+    margin-right: 10px;
+}
+.settings-links a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+}
+.settings-links a img {
+    width: 12px;
+}
+.settings-menu .user-profile a {
     text-decoration: none;
-    color: #626262;
+    color: #3c5a99;
 }
-#dark-btn{
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: #ccc;
-    width: 45px;
-    border-radius: 15px;
-    padding: 2px 3px;
-    cursor: pointer;
-    display: flex;
-    transition: padding-left 0.5s, background 0.5s;
+.settings-menu .user-profile a:hover {
+    text-decoration: underline;
 }
-#dark-btn span{
-    width: 18px;
-    height: 18px;
-    background: #fff;
-    border-radius: 50%;
-    display: inline-block;
-
-}
-#dark-btn.dark-btn-on{
-    padding-left: 23px;
-    background: #0a0a0a;
-}
-/* Existing CSS code ... */
-
-@media only screen and (max-width: 1200px) {
-    .write-post-container {
-        width: 100%;
-    }
-    .containeer {
-        flex-wrap: wrap;
-    }
-
-    .left-sidebar,
-    .main-content,
-    .right-sidebar {
-        flex-basis: 100%;
-        max-width: 100%;
-    }
-
-    .right-sidebar {
-        padding: 10px;
-    }
-
-    .event,
-    .online-list,
-    .story-gallery,
-    .write-post-container,
-    .post-containeer {
-        width: 100%;
-    }
-
-    .story {
-        flex-basis: 22%;
-        padding-top: 25%;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .create-post-container {
-        margin-right: 10px; 
-    }
-
-    .create-post-btn {
-        width: 35px;
-        height: 35px;
-        font-size: 16px;
-    }
-    .write-post-container {
-        margin-top: 10px; 
-    }
-    .nav-left ul {
-        display: none;
-    }
-
-    .nav-right {
-        display: none;
-    }
-
-    .nav-left .nav-user-icon {
-        margin-left: 10px;
-    }
-
-    .search-box {
-        width: 100%;
-        max-width: 300px;
-    }
-
-    .nav-left img.logo {
-        margin-right: 15px;
-    }
-
-    .nav-left ul {
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background-color: var(--nav-color);
-        text-align: center;
-    }
-
-    .nav-left ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .settings-menu {
-        top: 60px;
-        right: 0;
-    }
-}
-
-.post-interactions {
-    margin-top: 10px;
-}
-.comments {
-    margin-top: 10px;
-}
-.like-btn,
-.comment-btn {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    font-size: 16px;
-    margin-right: 10px;
-    color: #333;
-}
-button:hover {
-    background-color: #2c4870;
+.settings-menu.active {
+    display: block;
 }

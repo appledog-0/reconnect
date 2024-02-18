@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Post</title>
-    <link rel="stylesheet" href="style1.css">
+    <title>RECONNECT Profile</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/dcdee22e40.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="style2.css">
 
+
+    <script src="https://kit.fontawesome.com/dcdee22e40.js" crossorigin="anonymous"></script>
+   
 </head>
-<body >
+<body>
     <nav>
         <div class="nav-left">
             <img src="logo.png" class="logo">
@@ -62,25 +65,46 @@
             </div>
         </div>
     </nav>
-    <div class="create-post-page">
-        <div class="post-form">
-            <h2>Create Post</h2>
-            <label for="fileInput">Choose File:</label>
-            <input type="file" id="fileInput" accept="image/*">
-            
-            <label for="captionInput">Caption:</label>
-            <textarea id="captionInput" rows="4" placeholder="Write your caption..."></textarea>
-            
-            <label for="tagInput">Tag:</label>
-            <input type="text" id="tagInput" placeholder="Add tags, separated by commas">
-            
-            <button class="b1" onclick="postImage()">Post</button>
+    
+    <div class="notificationpage">
+        <div class="notificationcontainer">
+            <div class="notificationheader">
+                <h2>Notifications</h2>
+            </div>
+            <ul class="notificationlist">
+                <!-- Notification items will be dynamically added here -->
+                <li>
+                    <div class="notificationitem">
+                        <div class="notificationicon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="notificationcontent">
+                            <p>Aavas Chaudhary liked your post</p>
+                            <span>2 hours ago</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="notificationitem">
+                        <div class="notificationicon">
+                            <i class="fas fa-comment"></i>
+                        </div>
+                        <div class="notificationcontent">
+                            <p>Surbi Karki commented on your photo</p>
+                            <span>5 hours ago</span>
+                        </div>
+                    </div>
+                </li>
+                <!-- Add more notifications as needed -->
+            </ul>
         </div>
     </div>
 
-    <script src="script1.js"></script>
+  
     <script src="demoscript.js"></script>
     <script src="script.js"></script>
+    <script src="notification.js"></script>
+
     <script>
    
         document.getElementById('createPostBtn').addEventListener('click', function() {
@@ -92,10 +116,11 @@
     
     
 
-      
         document.getElementById('home').addEventListener('click', function() {
             window.location.href = 'homepage.html';
         });
+        
+    
         
     
     
@@ -121,11 +146,14 @@
             friendListContainer.style.display = friendListContainer.style.display === 'block' ? 'none' : 'block';
         }
 
+document.querySelector('.edit-profile-btn').addEventListener('click', function() {
+    
+    window.location.href = 'editprofile.html';
+});
+ 
+
         
     </script>
     
-   
-    
 </body>
 </html>
-

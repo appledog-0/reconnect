@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Post</title>
-    <link rel="stylesheet" href="style1.css">
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
     <script src="https://kit.fontawesome.com/dcdee22e40.js" crossorigin="anonymous"></script>
-
+   
 </head>
-<body >
+<body>
     <nav>
         <div class="nav-left">
             <img src="logo.png" class="logo">
@@ -62,70 +63,72 @@
             </div>
         </div>
     </nav>
+   
     <div class="create-post-page">
         <div class="post-form">
-            <h2>Create Post</h2>
+            <h2>Edit Profile</h2>
+         
             <label for="fileInput">Choose File:</label>
             <input type="file" id="fileInput" accept="image/*">
-            
-            <label for="captionInput">Caption:</label>
-            <textarea id="captionInput" rows="4" placeholder="Write your caption..."></textarea>
-            
-            <label for="tagInput">Tag:</label>
-            <input type="text" id="tagInput" placeholder="Add tags, separated by commas">
-            
-            <button class="b1" onclick="postImage()">Post</button>
-        </div>
-    </div>
+            <label for="Name">Name</label>
+            <textarea id="Firstname"  row="1" placeholder="First Nane"></textarea>
+            <textarea id="Lastname"  row="1" placeholder="Last Name"></textarea>
 
-    <script src="script1.js"></script>
-    <script src="demoscript.js"></script>
-    <script src="script.js"></script>
-    <script>
+            <label for="UserName">User Name</label>
+            <textarea id="Username"  row="1" placeholder="Username"></textarea>
+
+            <label for="website">Website</label>
+            <textarea id="Website"  row="1" placeholder="Website"></textarea>
+
+            <label for="Bio">Bio</label>
+            <textarea id="bio"  row="3" placeholder="write bio"></textarea>
+            
+            <button class="b1" onclick="editprofile()">Edit</button>
+        </div>
+    
+            <script src="script.js"></script>
+            <script src="script1.js"></script>
+            <script>
    
-        document.getElementById('createPostBtn').addEventListener('click', function() {
-            window.location.href = 'createpost.html';
-        });
-        document.getElementById('notificationBtn').addEventListener('click', function() {
+                document.getElementById('createPostBtn').addEventListener('click', function() {
+                    window.location.href = 'createpost.html';
+                });
+            
+                document.getElementById('notificationBtn').addEventListener('click', function() {
             window.location.href = 'notification2.html';
         });
     
-    
-
-      
-        document.getElementById('home').addEventListener('click', function() {
-            window.location.href = 'homepage.html';
-        });
-        
-    
-    
-        function logout() {
-           
-  
-            window.location.href = 'login.html';
-        }
-    
- 
-        var logoutLink = document.querySelector('.settings-links:last-of-type a');
-        logoutLink.addEventListener('click', function(event) {
-            event.preventDefault(); 
-            logout(); 
-        });
-        document.querySelector('.user-profile a').addEventListener('click', function(event) {
+              
+                document.getElementById('home').addEventListener('click', function() {
+                    window.location.href = 'homepage.html';
+                });
+                
+            
+            
+                function logout() {
+                   
+          
+                    window.location.href = 'login.html';
+                }
+            
+         
+                var logoutLink = document.querySelector('.settings-links:last-of-type a');
+                logoutLink.addEventListener('click', function(event) {
+                    event.preventDefault(); 
+                    logout(); 
+                });
+                document.querySelector('.user-profile a').addEventListener('click', function(event) {
     event.preventDefault(); 
     window.location.href = 'profile2.html'; 
 });
-      
-        function toggleFriendList() {
-            var friendListContainer = document.getElementById('friendListContainer');
-            friendListContainer.style.display = friendListContainer.style.display === 'block' ? 'none' : 'block';
-        }
-
+              
+                function toggleFriendList() {
+                    var friendListContainer = document.getElementById('friendListContainer');
+                    friendListContainer.style.display = friendListContainer.style.display === 'block' ? 'none' : 'block';
+                }
         
-    </script>
-    
-   
-    
-</body>
-</html>
-
+                
+            </script>
+            
+        </body>
+        </html>
